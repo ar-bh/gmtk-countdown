@@ -1,18 +1,46 @@
 [gd_scene format=3 uid="uid://ch8yvm2w7g7e5"]
 
+[ext_resource type="Script" uid="uid://b7apl3ir83oxu" path="res://gameplay/gameplay.gd" id="1_ktb3l"]
 [ext_resource type="PackedScene" uid="uid://4mdipk1jvq2m" path="res://player/player.tscn" id="2_41n4r"]
 [ext_resource type="Texture2D" uid="uid://b56jcm86x5qrk" path="res://map/pine_tree.png" id="3_ktb3l"]
 [ext_resource type="PackedScene" uid="uid://ca5hi0o4wid0k" path="res://enemies/slime/slime.tscn" id="3_ueusv"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pb_bg"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.1, 0.1, 0.12, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 3
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pb_fill"]
+bg_color = Color(1, 0.52, 0.08, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="Gameplay" type="Node2D" unique_id=1387358134]
+script = ExtResource("1_ktb3l")
 
 [node name="Map" type="Node2D" parent="." unique_id=1095250107]
 
 [node name="WhiteBackgroundColorRect" type="ColorRect" parent="Map" unique_id=1332958542]
-offset_left = -1874.0
-offset_top = -943.0
-offset_right = 2579.0
-offset_bottom = 1679.0
+offset_left = -2249.0
+offset_top = -1390.0
+offset_right = 2204.0
+offset_bottom = 1232.0
 
 [node name="PineTree" type="Sprite2D" parent="Map" unique_id=1663121200]
 position = Vector2(-263, 104)
@@ -35,6 +63,43 @@ position = Vector2(-563, -231)
 texture = ExtResource("3_ktb3l")
 
 [node name="Player" parent="." unique_id=1453844567 instance=ExtResource("2_41n4r")]
+unique_name_in_owner = true
 
 [node name="Slime" parent="." unique_id=1265096264 instance=ExtResource("3_ueusv")]
 position = Vector2(555, 117)
+
+[node name="LoopTimer" type="Timer" parent="." unique_id=675075050]
+unique_name_in_owner = true
+wait_time = 15.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1882922584]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=451341031]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = -32.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="LoopLabel" type="RichTextLabel" parent="CanvasLayer/VBoxContainer" unique_id=933775278]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Time until next wave/clone: xs[/center]"
+fit_content = true
+
+[node name="LoopProgressBar" type="ProgressBar" parent="CanvasLayer/VBoxContainer" unique_id=1991386752]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_pb_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pb_fill")
+value = 100.0
+show_percentage = false
