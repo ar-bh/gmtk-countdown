@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgsqcy47w7st5"]
 
-[ext_resource type="Texture2D" uid="uid://cd0csamimpp2t" path="res://weapon/fire.png" id="1_d6cvk"]
 [ext_resource type="Script" uid="uid://bgg4jmacld0ri" path="res://weapon/bullet.gd" id="1_ge33b"]
+[ext_resource type="Texture2D" uid="uid://bff7fbcvsexut" path="res://weapon/projectile.png" id="2_ge33b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge33b"]
 height = 44.0
@@ -10,7 +10,7 @@ height = 44.0
 script = ExtResource("1_ge33b")
 
 [node name="BulletSkin" type="Sprite2D" parent="." unique_id=15511652]
-texture = ExtResource("1_d6cvk")
+texture = ExtResource("2_ge33b")
 
 [node name="BulletHitBox" type="CollisionShape2D" parent="." unique_id=521296667]
 rotation = 1.5750544
