@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4mdipk1jvq2m"]
 
 [ext_resource type="Script" uid="uid://vfgkditra40r" path="res://player/player.gd" id="1_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://g6pgh40o3wnl" path="res://common/ground_shadow.png" id="2_g6k8r"]
 [ext_resource type="Texture2D" uid="uid://5sbbdmfujh3a" path="res://player/square_ref.png" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://b4xvvt4bx5f0r" path="res://player/weapon_pivot.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://bis4rwfcqk5mg" path="res://weapon/weapon.tscn" id="3_yw30f"]
@@ -12,6 +13,10 @@ radius = 79.05694
 [node name="Player" type="CharacterBody2D" unique_id=1453844567 groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_g1dw6")
+
+[node name="GroundShadow" type="Sprite2D" parent="." unique_id=1033465817]
+position = Vector2(0, 66)
+texture = ExtResource("2_g6k8r")
 
 [node name="Skin" type="Sprite2D" parent="." unique_id=56958923]
 position = Vector2(0, 12.969566)

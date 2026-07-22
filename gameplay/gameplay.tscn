@@ -1,15 +1,40 @@
 [gd_scene format=3 uid="uid://ch8yvm2w7g7e5"]
 
-[ext_resource type="Texture2D" uid="uid://bait8wie5qck3" path="res://map/temporary map.png" id="1_nyvx4"]
 [ext_resource type="PackedScene" uid="uid://4mdipk1jvq2m" path="res://player/player.tscn" id="2_41n4r"]
+[ext_resource type="Texture2D" uid="uid://b56jcm86x5qrk" path="res://map/pine_tree.png" id="3_ktb3l"]
 [ext_resource type="PackedScene" uid="uid://ca5hi0o4wid0k" path="res://enemies/slime/slime.tscn" id="3_ueusv"]
 
 [node name="Gameplay" type="Node2D" unique_id=1387358134]
 
-[node name="Map" type="Sprite2D" parent="." unique_id=626163624]
-texture = ExtResource("1_nyvx4")
+[node name="Map" type="Node2D" parent="." unique_id=1095250107]
 
-[node name="Player" parent="." unique_id=1453844567 groups=["player"] instance=ExtResource("2_41n4r")]
+[node name="WhiteBackgroundColorRect" type="ColorRect" parent="Map" unique_id=1332958542]
+offset_left = -1874.0
+offset_top = -943.0
+offset_right = 2579.0
+offset_bottom = 1679.0
+
+[node name="PineTree" type="Sprite2D" parent="Map" unique_id=1663121200]
+position = Vector2(-263, 104)
+texture = ExtResource("3_ktb3l")
+
+[node name="PineTree2" type="Sprite2D" parent="Map" unique_id=1185484525]
+position = Vector2(-90, -327)
+texture = ExtResource("3_ktb3l")
+
+[node name="PineTree3" type="Sprite2D" parent="Map" unique_id=988461797]
+position = Vector2(587, -170)
+texture = ExtResource("3_ktb3l")
+
+[node name="PineTree4" type="Sprite2D" parent="Map" unique_id=991235985]
+position = Vector2(438, 367)
+texture = ExtResource("3_ktb3l")
+
+[node name="PineTree5" type="Sprite2D" parent="Map" unique_id=1555136115]
+position = Vector2(-563, -231)
+texture = ExtResource("3_ktb3l")
+
+[node name="Player" parent="." unique_id=1453844567 instance=ExtResource("2_41n4r")]
 
 [node name="Slime" parent="." unique_id=1265096264 instance=ExtResource("3_ueusv")]
 position = Vector2(555, 117)
