@@ -19,4 +19,4 @@ func _process(delta: float) -> void:
 	loop_progress_bar.value = (loop_timer.time_left / loop_timer.wait_time) * 100.0
 
 func _on_loop_timer_timeout() -> void:
-	pass
+	player.reset_frame_history()

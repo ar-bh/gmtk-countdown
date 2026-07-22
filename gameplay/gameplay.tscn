@@ -70,7 +70,7 @@ position = Vector2(555, 117)
 
 [node name="LoopTimer" type="Timer" parent="." unique_id=675075050]
 unique_name_in_owner = true
-wait_time = 15.0
+wait_time = 5.0
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1882922584]
