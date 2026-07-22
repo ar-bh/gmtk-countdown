@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge33b"]
 height = 44.0
 
-[node name="Bullet" type="Area2D" unique_id=75661684]
+[node name="Bullet" type="Area2D" unique_id=75661684 groups=["bullet"]]
 script = ExtResource("1_ge33b")
 
 [node name="BulletSkin" type="Sprite2D" parent="." unique_id=15511652]

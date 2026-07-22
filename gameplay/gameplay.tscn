@@ -2,10 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bait8wie5qck3" path="res://map/temporary map.png" id="1_nyvx4"]
 [ext_resource type="PackedScene" uid="uid://4mdipk1jvq2m" path="res://player/player.tscn" id="2_41n4r"]
+[ext_resource type="PackedScene" uid="uid://ca5hi0o4wid0k" path="res://enemies/slime/slime.tscn" id="3_ueusv"]
 
 [node name="Gameplay" type="Node2D" unique_id=1387358134]
 
 [node name="Map" type="Sprite2D" parent="." unique_id=626163624]
 texture = ExtResource("1_nyvx4")
 
-[node name="Player" parent="." unique_id=1453844567 instance=ExtResource("2_41n4r")]
+[node name="Player" parent="." unique_id=1453844567 groups=["player"] instance=ExtResource("2_41n4r")]
+
+[node name="Slime" parent="." unique_id=1265096264 instance=ExtResource("3_ueusv")]
+position = Vector2(555, 117)

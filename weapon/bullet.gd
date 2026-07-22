@@ -6,6 +6,10 @@ extends Area2D
 
 var _traveled_distance := 0.0
 
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+
 func _physics_process(delta: float) -> void:
 	var distance := speed * delta
 	var motion := Vector2.RIGHT.rotated(rotation) * distance
@@ -15,6 +19,12 @@ func _physics_process(delta: float) -> void:
 	_traveled_distance += distance
 	if _traveled_distance > max_range:
 		_destroy()
+		
+		
+func _on_body_entered(body: Node) -> void:
+	body.queue_free()
+	_destroy()
+		
 		
 func _destroy() -> void:
 	queue_free()

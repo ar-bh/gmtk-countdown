@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4mdipk1jvq2m"]
 
 [ext_resource type="Script" uid="uid://vfgkditra40r" path="res://player/player.gd" id="1_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://cq11ce5q7fau2" path="res://common/icon.svg" id="1_oul6g"]
+[ext_resource type="Texture2D" uid="uid://5sbbdmfujh3a" path="res://player/square_ref.png" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://b4xvvt4bx5f0r" path="res://player/weapon_pivot.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://bis4rwfcqk5mg" path="res://weapon/weapon.tscn" id="3_yw30f"]
 
@@ -13,7 +13,8 @@ motion_mode = 1
 script = ExtResource("1_g1dw6")
 
 [node name="Skin" type="Sprite2D" parent="." unique_id=56958923]
-texture = ExtResource("1_oul6g")
+scale = Vector2(1.8628736, 1.8628736)
+texture = ExtResource("2_yw30f")
 
 [node name="HitBox" type="CollisionShape2D" parent="." unique_id=1393165928]
 shape = SubResource("CircleShape2D_rkbax")

@@ -19,6 +19,11 @@ config/icon="res://common/icon.svg"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+player=""
+bullet=""
+
 [input]
 
 move_left={
