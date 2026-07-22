@@ -2,7 +2,7 @@ class_name BasicEnemy
 extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-@onready var hitbox: Area2D = %HitBox
+@onready var hitbox: CollisionShape2D = %HitBox
 
 var player = null
 

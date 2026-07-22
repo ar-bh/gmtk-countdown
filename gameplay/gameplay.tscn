@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://4mdipk1jvq2m" path="res://player/player.tscn" id="2_41n4r"]
 [ext_resource type="Texture2D" uid="uid://b56jcm86x5qrk" path="res://map/pine_tree.png" id="3_ktb3l"]
 [ext_resource type="PackedScene" uid="uid://ca5hi0o4wid0k" path="res://enemies/slime/slime.tscn" id="3_ueusv"]
+[ext_resource type="FontFile" uid="uid://cspv72rjdk28m" path="res://common/augiepixel.ttf" id="5_gvicd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pb_bg"]
 content_margin_left = 3.0
@@ -89,6 +90,7 @@ theme_override_constants/separation = 10
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_gvicd")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]Time until next wave/clone: xs[/center]"

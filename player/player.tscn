@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vfgkditra40r" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://g6pgh40o3wnl" path="res://common/ground_shadow.png" id="2_g6k8r"]
-[ext_resource type="Texture2D" uid="uid://5sbbdmfujh3a" path="res://player/square_ref.png" id="2_yw30f"]
+[ext_resource type="Texture2D" uid="uid://ce43f2ipv20bs" path="res://player/green_player.png" id="3_g6k8r"]
 [ext_resource type="Script" uid="uid://b4xvvt4bx5f0r" path="res://player/weapon_pivot.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://bis4rwfcqk5mg" path="res://weapon/weapon.tscn" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://dms7mdwxbosad" path="res://weapon/pistol.png" id="5_qjkh3"]
@@ -21,7 +21,7 @@ texture = ExtResource("2_g6k8r")
 [node name="Skin" type="Sprite2D" parent="." unique_id=56958923]
 position = Vector2(0, 12.969566)
 scale = Vector2(1.0151495, 1.0151495)
-texture = ExtResource("2_yw30f")
+texture = ExtResource("3_g6k8r")
 
 [node name="HitBox" type="CollisionShape2D" parent="." unique_id=1393165928]
 position = Vector2(0, -0.030433655)
