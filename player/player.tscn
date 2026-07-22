@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://vfgkditra40r" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://cq11ce5q7fau2" path="res://common/icon.svg" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://b4xvvt4bx5f0r" path="res://player/weapon_pivot.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://bis4rwfcqk5mg" path="res://weapon/weapon.tscn" id="3_yw30f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
 radius = 79.05694
 
 [node name="Player" type="CharacterBody2D" unique_id=1453844567]
+motion_mode = 1
 script = ExtResource("1_g1dw6")
 
 [node name="Skin" type="Sprite2D" parent="." unique_id=56958923]
@@ -16,6 +18,12 @@ texture = ExtResource("1_oul6g")
 [node name="HitBox" type="CollisionShape2D" parent="." unique_id=1393165928]
 shape = SubResource("CircleShape2D_rkbax")
 
-[node name="Weapon" parent="." unique_id=1641428060 instance=ExtResource("3_yw30f")]
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=845571441]
+
+[node name="WeaponPivot" type="Node2D" parent="." unique_id=509335909]
+script = ExtResource("3_qjkh3")
+
+[node name="Marker2D" type="Marker2D" parent="WeaponPivot" unique_id=263854440]
+position = Vector2(123, 0)
+
+[node name="Weapon" parent="WeaponPivot/Marker2D" unique_id=1641428060 instance=ExtResource("3_yw30f")]
