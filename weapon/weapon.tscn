@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bis4rwfcqk5mg"]
+
+[ext_resource type="Script" uid="uid://dv6lcpc0c0t06" path="res://weapon/weapon.gd" id="1_4ht74"]
+
+[node name="Weapon" type="Node2D" unique_id=1641428060]
+script = ExtResource("1_4ht74")
+random_angle = 0.0
