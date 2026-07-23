@@ -22,7 +22,8 @@ func _physics_process(delta: float) -> void:
 		
 		
 func _on_body_entered(body: Node) -> void:
-	body.queue_free()
+	if body is BasicEnemy:
+		body.die()
 	_destroy()
 		
 		

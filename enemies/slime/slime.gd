@@ -1,6 +1,8 @@
 class_name BasicEnemy
 extends CharacterBody2D
 
+signal died
+
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var hitbox: CollisionShape2D = %HitBox
 
@@ -32,3 +34,8 @@ func play_walk():
 func play_hurt():
 	animation_player.play("hurt")
 	animation_player.queue("walk")
+
+
+func die() -> void:
+	died.emit()
+	queue_free()

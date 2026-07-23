@@ -7,31 +7,45 @@
 [ext_resource type="PackedScene" uid="uid://bis4rwfcqk5mg" path="res://weapon/weapon.tscn" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://dms7mdwxbosad" path="res://weapon/pistol.png" id="5_qjkh3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
-radius = 79.05694
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6k8r"]
+radius = 37.216827
+height = 181.94891
 
 [node name="Player" type="CharacterBody2D" unique_id=1453844567 groups=["player"]]
+collision_layer = 1
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_g1dw6")
 
 [node name="GroundShadow" type="Sprite2D" parent="." unique_id=1033465817]
-position = Vector2(0, 66)
+position = Vector2(1, 54)
 texture = ExtResource("2_g6k8r")
 
 [node name="Skin" type="Sprite2D" parent="." unique_id=56958923]
-position = Vector2(0, 12.969566)
-scale = Vector2(1.0151495, 1.0151495)
+position = Vector2(-2.3841858e-07, 13.000002)
+scale = Vector2(0.41814384, 0.41814384)
 texture = ExtResource("3_g6k8r")
 
 [node name="HitBox" type="CollisionShape2D" parent="." unique_id=1393165928]
-position = Vector2(0, -0.030433655)
+position = Vector2(0.99999994, 2.9999995)
 scale = Vector2(0.48365217, 0.48365217)
-shape = SubResource("CircleShape2D_rkbax")
+shape = SubResource("CapsuleShape2D_g6k8r")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=2100000010]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=2100000011]
+position = Vector2(0.99999994, 2.9999995)
+scale = Vector2(0.48365217, 0.48365217)
+shape = SubResource("CapsuleShape2D_g6k8r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=845571441]
 position = Vector2(0, 12.969566)
 
 [node name="WeaponPivot" type="Node2D" parent="." unique_id=509335909]
+unique_name_in_owner = true
 position = Vector2(0, 12.969566)
 script = ExtResource("3_qjkh3")
 
